@@ -23,3 +23,5 @@
 /* Define to 1 if dwarf.h is in the libdwarf folder */
 #cmakedefine HAVE_LIBDWARF_DWARF_H 1
 
+/* Define to 1 if you have the <link.h> header file. */
+#cmakedefine HAVE_LINK_H 1

@@ -124,9 +124,9 @@ if (NOT HAVE_DWARF_H AND NOT HAVE_LIBDWARF_DWARF_H)
     message (STATUS "libdwarf not found. Disabling Backtrace support.")
 endif ()
 
-configure_file (backtrace-supported.h.in backtrace-supported.h)
+configure_file (backtrace-supported.h.in libbacktrace/backtrace-supported.h)
 
-configure_file (config.h.in.cmake config.h)
+configure_file (config.h.in.cmake libbacktrace/config.h)
 
 include_directories (BEFORE
     ${CMAKE_CURRENT_BINARY_DIR}
