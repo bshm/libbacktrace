@@ -125,9 +125,9 @@ endif ()
 
 check_include_file (link.h HAVE_LINK_H)
 
-configure_file (backtrace-supported.h.in ${CMAKE_BINARY_DIR}libbacktrace/backtrace-supported.h)
+configure_file (backtrace-supported.h.in ${CMAKE_CURRENT_BINARY_DIR}/backtrace-supported.h)
 
-configure_file (config.h.in.cmake ${CMAKE_BINARY_DIR}/libbacktrace/config.h)
+configure_file (config.h.in.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h)
 
 include_directories (BEFORE
     ${CMAKE_CURRENT_BINARY_DIR}
