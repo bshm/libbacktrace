@@ -29,8 +29,7 @@
 # IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.  */
 
-cmake_minimum_required (VERSION 2.8)
-cmake_policy (VERSION 2.8)
+cmake_minimum_required (VERSION 3.6)
 
 project (libbacktrace)
 
@@ -123,6 +122,8 @@ if (NOT HAVE_DWARF_H AND NOT HAVE_LIBDWARF_DWARF_H)
     set (BACKTRACE_SUPPORTED 0)
     message (STATUS "libdwarf not found. Disabling Backtrace support.")
 endif ()
+
+check_include_file (link.h HAVE_LINK_H)
 
 configure_file (backtrace-supported.h.in libbacktrace/backtrace-supported.h)
 
